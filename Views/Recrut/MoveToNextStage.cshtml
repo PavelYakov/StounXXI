@@ -1,0 +1,25 @@
+﻿@model StounXXI.Models.Candidate
+
+<h2>Move Candidate to Next Stage</h2>
+
+<p>
+    The candidate has been moved to the next stage successfully.
+</p>
+
+<dl class="dl-horizontal">
+    <dt>First Name:</dt>
+    <dd>@Model.FirstName</dd>
+
+    <dt>Last Name:</dt>
+    <dd>@Model.LastName</dd>
+
+    <dt>Email:</dt>
+    <dd>@Model.Email</dd>
+
+    <dt>Status:</dt>
+    <dd>@Model.Status</dd>
+</dl>
+
+<p>
+    <a asp-action="Index">Back to Candidates List</a>
+</p>

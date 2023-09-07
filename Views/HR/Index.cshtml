@@ -1,0 +1,25 @@
+﻿@model List<StounXXI.Models.HR>
+
+<h2>HR Specialists </h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LasttName</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hrSpecialist in Model)
+        {
+            <tr>
+                <td>@hrSpecialist.FirstName</td>
+                <td>@hrSpecialist.LastName</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@hrSpecialist.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

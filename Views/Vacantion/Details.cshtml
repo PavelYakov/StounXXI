@@ -1,0 +1,19 @@
+﻿@model StounXXI.Models.Vacancy
+
+<h2>Vacancy Details</h2>
+
+<dl class="dl-horizontal">
+    <dt>Title:</dt>
+    <dd>@Model.Title</dd>
+
+    <dt>IsClosed:</dt>
+    <dd>@Model.IsClosed</dd>
+
+    <dt>Department:</dt>
+    <dd>@Model.Department.Name</dd>
+</dl>
+
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>

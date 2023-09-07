@@ -1,0 +1,24 @@
+﻿@model List<StounXXI.Models.Department>
+
+<h2>Departments List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.Name</td>
+                
+                <td>
+                    <a asp-action="Details" asp-route-id="@department.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

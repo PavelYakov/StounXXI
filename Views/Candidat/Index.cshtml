@@ -1,0 +1,30 @@
+﻿@model List<StounXXI.Models.Candidate>
+
+<h2>Candidates List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var candidate in Model)
+        {
+            <tr>
+                <td>@candidate.FirstName</td>
+                <td>@candidate.LastName</td>
+                <td>@candidate.Email</td>
+                
+                <td>
+                    <a asp-action="Details" asp-route-id="@candidate.Id">Details</a> |
+                    <a asp-action="Edit" asp-route-id="@candidate.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@candidate.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,19 @@
+﻿@model StounXXI.Models.Vacancy
+
+<h2>Delete</h2>
+
+<p>Удалить эту вакансию?</p>
+
+<dl class="dl-horizontal">
+    <dt>Title:</dt>
+    <dd>@Model.Title</dd>
+        
+    <dt>Department:</dt>
+    <dd>@Model.Department.Name</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-action="Index">Back to List</a>
+</form>
